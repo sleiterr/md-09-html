@@ -154,7 +154,7 @@
   .bar {
     height: 4px;
     width: 100%;
-    background-color: #fffafa;
+    background-color: rgb(238, 200, 164);
     border-radius: 10px;
   }
 
@@ -285,7 +285,7 @@
   .bar {
     height: 4px;
     width: 100%;
-    background-color: #fffafa;
+    background-color: rgb(238, 200, 164);
     border-radius: 10px;
   }
 
