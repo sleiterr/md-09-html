@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet cake</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/media-query.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -19,44 +21,74 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <ul class="header-menu">
-          <li class="header-item">
-            <a href="#" class="header-link logo">Sweet cake</a>
-          </li>
-          <li class="header-item">
-            <a href="#" class="header-link">Home</a>
-          </li>
-          <li class="header-item">
-            <a href="#" class="header-link">About</a>
-          </li>
-          <li class="header-item">
-            <a href="#" class="header-link">Product</a>
-          </li>
-        </ul>
+      <header id="home">
+        <nav class="nav-bar">
+          <div class="burger-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="mobil-item">
+            <a href="#" class="mobil-item">Sweet cake</a>
+          </div>
+          <ul class="header-menu">
+            <li class="header-item">
+              <a href="#" class="header-link logo">Sweet cake</a>
+            </li>
+            <li class="header-item">
+              <a href="#home" class="header-link">Home</a>
+            </li>
+            <li class="header-item">
+              <a href="#product" class="header-link">Product</a>
+            </li>
+            <li class="header-item">
+              <a href="#about" class="header-link">About</a>
+            </li>
+            <li class="header-item">
+              <a href="#contact" class="header-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
         <div class="header-title">
           <h1 class="header-heading">
             Handmade <br />exclusive <span>cakes</span>
           </h1>
           <button type="button" class="header-button">Order a cake</button>
         </div>
+        <div class="social-box">
+          <ul class="sicoal-list">
+            <li class="social-item">
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </header>
-      <section class="gallery-section">
+      <section class="gallery-section" id="product">
         <h2 class="gallery-title">Look at our in cakes</h2>
         <div class="gallery-product">
-          <a href="#"> <img src="./img/cake-1.jpg" alt="cake" /></a>
-          <a href="#"> <img src="./img/cake-2.jpg" alt="cake" /></a>
-          <a href="#"> <img src="./img/cheese-cake-1.jpg" alt="" /></a>
-        </div>
-        <div class="gallery-product">
-          <a href="#"> <img src="./img/cheese-cake.jpg" alt="cake" /></a>
-          <a href="#"> <img src="./img/cupcake.jpg" alt="cake" /></a>
-          <a href="#"> <img src="./img/dessert.jpg" alt="" /></a>
+          <a href="#"> <img src="./img/cake-1.jpg" alt="cake" data-aos="zoom-in"/></a>
+          <a href="#"> <img src="./img/cake-2.jpg" alt="cake" data-aos="zoom-in"/></a>
+          <a href="#"> <img src="./img/cheese-cake-1.jpg" alt="" data-aos="zoom-in"/></a>
+          <a href="#"> <img src="./img/cheese-cake.jpg" alt="cake" data-aos="zoom-in"/></a>
+          <a href="#"> <img src="./img/cupcake.jpg" alt="cake" data-aos="zoom-in"/></a>
+          <a href="#"> <img src="./img/dessert.jpg" alt="" data-aos="zoom-in"/></a>
         </div>
       </section>
       <section>
-        <div class="about-box">
-          <img src="./img/cook.jpg" alt="cook" />
+        <div class="about-box" id="about">
+          <img src="./img/cook.jpg" alt="cook" data-aos="flip-left"/>
           <div class="about-section">
             <h2>About us</h2>
             <p class="about-text">
@@ -72,6 +104,43 @@
           </div>
         </div>
       </section>
+      <section class="contact-one" id="contact">
+        <div class="form-section">
+          <h2 class="contact-title">Contact</h2>
+          <p class="contact-subject">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem velit
+            itaque, amet laudantium nobis culpa laboriosam iste dolorem incidunt
+            ea quasi autem facilis perferendis? Mollitia accusamus similique sed
+            adipisci obcaecati?
+          </p>
+          <form action="#">
+            <input
+              class="contact-input"
+              type="text"
+              name="Name"
+              id="name-tx"
+              placeholder="name"
+            />
+            <input
+              type="email"
+              name="Email"
+              id="email-txt"
+              placeholder="email"
+            />
+            <textarea
+              name="message"
+              id="message-txt"
+              cols="30"
+              rows="10"
+              placeholder="message"
+            ></textarea>
+            <input type="submit" value="send" />
+          </form>
+        </div>
+        <div class="img-contact">
+          <img src="./img/baker.png" alt="baker" data-aos="flip-right"/>
+        </div>
+      </section>
     </div>
     <footer>
       <div class="info-footer">
@@ -83,19 +152,22 @@
           </li>
           <li>
             <i class="fa-solid fa-phone phone-icon"></i
-            ><a
-              href="
-              tel:+110001111111"
-              >Telefon: +11 (000) 111-11-11</a
-            >
+            ><a href="tel:+110001111111">Telefon: +11 (000) 111-11-11</a>
           </li>
           <li>
             <i class="fa-solid fa-location-dot address-icon"></i>
             <a href="Geo:">Amphitheatre Parkway, Mountain View, CA</a>
           </li>
         </ul>
-        <p class="footer-name">&#xa9;product by Oleg</p>
+        <p class="footer-name">&#xa9; product by Oleg</p>
       </div>
     </footer>
+    <script src="./JS/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800
+      });
+    </script>
   </body>
 </html>
