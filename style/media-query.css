@@ -288,6 +288,7 @@
     width: 100%;
     background-color: rgb(238, 200, 164);
     border-radius: 10px;
+    transition: 250ms ease;
   }
 
   .header-link {
