@@ -79,7 +79,7 @@ button {
 :root {
   --text: #fff;
   --dark: #000;
-  --primery: springgreen;
+  --background-link: #ebbec5;
   --secondary: yellowgreen;
   --tertiary: yellow;
   --quaternary: firebrick;
@@ -148,7 +148,7 @@ header {
 }
 
 .header-link:hover {
-  color: #ebbec5;
+  color: var(--background-link);
   transition: 0.3s ease;
 }
 
@@ -233,8 +233,8 @@ ul li:first-child {
   height: 50px;
   padding: 5px;
   border-radius: 50%;
-  background-color: #ebbec5;
-  border: 1px solid #ebbec5;
+  background-color: var(--background-link);
+  border: 1px solid var(--background-link);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
